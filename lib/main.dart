@@ -1071,7 +1071,7 @@ class _ExampleAppState extends State<ExampleApp> with SingleTickerProviderStateM
               Divider(),
               ListTile(
                 leading: Icon(Icons.folder),
-                title: Text('Filees at Server.', style: TextStyle(fontFamily: 'Jura', fontWeight: FontWeight.bold, fontSize: 17),),
+                title: Text('Files at Server.', style: TextStyle(fontFamily: 'Jura', fontWeight: FontWeight.bold, fontSize: 17),),
                 onTap: () {
                   if(serverList.length > 0) {
                     getFileList("", wipeBackCache: true);
@@ -1412,7 +1412,7 @@ class MyCustomFormState extends State<MyCustomForm> {
               },
               keyboardType: TextInputType.emailAddress,
               decoration: InputDecoration(
-                hintText: 'https://mstream.io',
+                hintText: 'https://safe-mesa-29334.herokuapp.com',
                 labelText: 'Server URL',
               ),
               onSaved: (String value) {
@@ -1431,7 +1431,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                   // Check against the directory
                   String dir = path.join(useThisDir.path, 'media/' + value);
                   if (new Directory(dir).existsSync() == true) {
-                    return 'Pathname Already Exists';
+                    return 'Path name Already Exists';
                   }
                   return RegExp(r"^[a-zA-Z0-9_\- ]*$").hasMatch(value) ? null : 'No Special Characters';
                 }
